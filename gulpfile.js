@@ -63,7 +63,7 @@ gulp.task('default', ['pug:dev', 'sass:dev', 'js:dev'], () => {
 // Build
 gulp.task('build', ['pug:prod', 'sass:prod', 'js:prod'], () => {
   let textColor = '\x1b[33m%s\x1b[0m';
-  console.log(textColor, '===========================');
-  console.log(textColor, 'Build completed in: ./build');
-  console.log(textColor, '===========================');
+  console.log(textColor, '==============================');
+  console.log(textColor, '🏗  Build completed in: ./build');
+  console.log(textColor, '==============================');
 })

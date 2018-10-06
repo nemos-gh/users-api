@@ -1,4 +1,9 @@
-body {
-  display: flex;
-  color: crimson;
-}
+@import 
+  '../../node_modules/reset-css/sass/_reset.scss';
+  
+@import
+  './abstracts/variables';
+
+@import
+  './components/buttons',
+  './components/authors';
