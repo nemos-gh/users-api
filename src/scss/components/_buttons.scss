@@ -1,9 +1,9 @@
 .more-users {
   margin: 30px 0;
   padding: 15px 25px;
-  color: white;
+  color: $base-light;
   font-size: 15px;
-  background: black;
+  background: $base-dark;
   transition: all .3s ease-in-out;
   border: 0;
   border-radius: 4px;
@@ -12,10 +12,10 @@
   cursor: pointer;
 
   &:hover {
-    background: crimson;
+    background: $main-color;
   }
 
   &:active {
-    background: black;
+    background: $base-dark;
   }
 }

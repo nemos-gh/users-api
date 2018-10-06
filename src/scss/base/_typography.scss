@@ -1,9 +1,9 @@
 h1 {
   margin: 40px 0 20px;
-  color: black;
+  color: $base-dark;
   line-height: 2.5rem;
   font-size: 2rem;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $main-font;
 
   @media (min-width: 640px) {
     margin-top: 60px;
