@@ -1,1 +1,3 @@
-# Playing with: Random users API
+# Random Users
+
+Playing with Random Users API: https://randomuser.me/
