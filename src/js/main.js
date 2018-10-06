@@ -1,5 +1,40 @@
-let msg = 'Hello Babel';
+const url = 'https://randomuser.me/api/?results=6';
+const ul = document.getElementById('users');
+const btnGenerate = document.querySelector('.more-users');
 
-let $h = document.querySelector('.main-h');
+let createNode = el => document.createElement(el);
+let append = (parent, el) => parent.appendChild(el);
 
-$h.textContent = msg;
+let generateUsers = () => {
+  
+  ul.innerHTML = "";
+  ul.classList.add('loading');
+  
+  fetch(url)
+    .then(res => res.json())
+    .then(res => new Promise(resolve => setTimeout(() => resolve(res), 800)))
+    .then(data => {
+      let users = data.results;
+    
+      users.map(user => {
+        let li = createNode('li'),
+        pic = createNode('img'),
+        span = createNode('span');
+        
+        pic.src = user.picture.large;
+        span.innerHTML = `${user.name.first} ${user.name.last}`;
+        
+        append(li, pic)
+        append(li, span);
+        append(ul, li);
+      })
+
+      setTimeout(() => {
+        ul.classList.remove('loading');
+      }, 100)
+  });
+}
+
+generateUsers();
+
+btnGenerate.addEventListener('click', () => generateUsers());

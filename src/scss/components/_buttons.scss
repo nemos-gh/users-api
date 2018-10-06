@@ -1,0 +1,21 @@
+.more-users {
+  margin: 30px 0;
+  padding: 15px 25px;
+  color: white;
+  font-size: 15px;
+  background: black;
+  transition: all .3s ease-in-out;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 40px rgba(0,0,0,.18);
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: crimson;
+  }
+
+  &:active {
+    background: black;
+  }
+}

@@ -5,5 +5,12 @@
   './abstracts/variables';
 
 @import
+  './layout/general',
+  './layout/app';
+
+@import
+  './base/typography';
+
+@import
   './components/buttons',
-  './components/authors';
+  './components/users';
