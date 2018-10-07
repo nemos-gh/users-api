@@ -6,8 +6,7 @@ let createNode = el => document.createElement(el);
 let append = (parent, el) => parent.appendChild(el);
 
 let generateUsers = () => {
-  
-  ul.innerHTML = "";
+  ul.innerHTML = '';
   ul.classList.add('loading');
   
   fetch(url)
@@ -15,16 +14,16 @@ let generateUsers = () => {
     .then(res => new Promise(resolve => setTimeout(() => resolve(res), 800)))
     .then(data => {
       let users = data.results;
-    
+
       users.map(user => {
         let li = createNode('li'),
-        pic = createNode('img'),
-        span = createNode('span');
+            img = createNode('img'),
+            span = createNode('span');
         
-        pic.src = user.picture.large;
+        img.src = user.picture.large;
         span.innerHTML = `${user.name.first} ${user.name.last}`;
         
-        append(li, pic)
+        append(li, img)
         append(li, span);
         append(ul, li);
       })
