@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 600px;
@@ -18,17 +19,15 @@
   }
 
   &.loading {
-    position: relative;
 
     &::after {
       content: '';
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
+      margin: -15px 0 0 -15px;
       border-top: 2px solid $preloader;
       border-radius: 50%;
       animation: preloader 1s linear infinite;
