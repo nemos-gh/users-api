@@ -5,7 +5,7 @@ const btnGenerate = document.querySelector('.more-users');
 let createNode = el => document.createElement(el);
 let append = (parent, el) => parent.appendChild(el);
 
-let generateUsers = () => {
+;(generateUsers = () => {
   ul.innerHTML = '';
   ul.classList.add('loading');
   
@@ -32,8 +32,6 @@ let generateUsers = () => {
         ul.classList.remove('loading');
       }, 100)
   });
-}
+})();
 
-generateUsers();
-
-btnGenerate.addEventListener('click', () => generateUsers());
+btnGenerate.addEventListener('click', () => window.generateUsers());
